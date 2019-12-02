@@ -5,7 +5,7 @@ Thank you for inviting me to completing this test challenge.
 ## Assumptions
 
 I've made several assumptions:
-1.
+1. Input file is static ([1](https://github.com/Unbabel/backend-engineering-challenge/issues/5#issuecomment-491233710))
 2.
 3.
 
