@@ -3,6 +3,7 @@ import unittest
 
 from utils.args_parser import create_parser
 
+
 class CommandLineTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -10,7 +11,7 @@ class CommandLineTestCase(unittest.TestCase):
         cls.parser = parser
 
 
-class ConverterTestCase(CommandLineTestCase):
+class ArgsparserTestCase(CommandLineTestCase):
     def test_with_empty_args(self):
         with self.assertRaises(SystemExit):
             self.parser.parse_args(['--input_file', '--window_size'])

@@ -12,12 +12,23 @@ I've made several assumptions based on previous questions and answers:
 ## Run the app
 1. create virtualenv with your favorite tool, e.g. virtualenv, virtualenvwrapper, Pipenv, etc.
 2. install all dependencies from requirements.txt (or Pipfile if using Pipenv)
-3. run the app
+3. cd to directory with project
+4. run the app
 
 How to run the app:
 
 	python main.py --input_file events.json --window_size 10
 	
+## Run tests
+1. create virtualenv
+2. cd to directory with tests
+3. add project directory to PYTHONPATH
+4. run tests
+
+How to run the app:
+
+	python -m unittest
+
 ### Some explaining
 1. - Why use custom input object and not 'with open(file) as file: ...'?
 - You can redefine any input object (e.g. data from database) and you don't need to change a lot of code. You just need 
