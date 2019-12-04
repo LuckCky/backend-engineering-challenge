@@ -23,3 +23,7 @@ class InputSourceFile:
     def __exit__(self, exc_type, exc_val, exc_tb):
         logger.info(f'closing input object for file {self.file_path}')
         self.input_source.close()
+
+    def first_line(self):
+        with open(self.file_path) as file:
+            return file.readline()

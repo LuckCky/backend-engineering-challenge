@@ -22,7 +22,10 @@ def main():
         sys.exit('Input file is not valid. Please, check')
     logger.info('arguments are valid')
     input_obj = InputSourceFile(input_file)
+    first_line = input_obj.first_line()
+
     with input_obj:
+        records_count = 0
         for line in input_obj:
             line_as_dict = json.loads(line)
             timestamp_str = line_as_dict.get('timestamp', None)
