@@ -27,6 +27,12 @@ class TestUtils(unittest.TestCase):
         path = self.csv_path
         self.assertFalse(check_file_path(path))
 
+    def test_check_file_path_empty_file(self):
+        path = self.csv_path
+        data = []
+        self.make_file(path, data)
+        self.assertFalse(check_file_path(path))
+
     def test_check_file_path_file(self):
         path = self.csv_path
         data = ['{1: 2, 3: 4}', '{5: 6, 7: 8}']

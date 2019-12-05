@@ -7,7 +7,8 @@ Thank you for inviting me to completing this test challenge.
 I've made several assumptions based on previous questions and answers:
 1. Input file is static ([1](https://github.com/Unbabel/backend-engineering-challenge/issues/5#issuecomment-491233710))
 2. Input file is text file containing stringified JSONs ([2](https://github.com/Unbabel/backend-engineering-challenge/issues/11#issuecomment-496878358)) 
-3. window size is integer because it is in minutes 
+3. window size is integer because it is in minutes
+4. Python 3.6+ to preserve elements order in dict with date (of course I can use OrderedDict if using Python earlier than 3.6, but I'd like to use modern version if possible) 
 
 ## Run the app
 1. create virtualenv with your favorite tool, e.g. virtualenv, virtualenvwrapper, Pipenv, etc.
