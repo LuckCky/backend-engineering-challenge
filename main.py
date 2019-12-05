@@ -48,14 +48,14 @@ def main():
             while timestamp != moving_av.last_output_date:
                 with open('output.json', 'a') as f:
                     f.write(f'{{"date": {moving_av.last_output_date} , '
-                            f'"duration": "{moving_av.get_current_average()}"}} \n')
+                            f'"average_delivery_time": "{moving_av.get_current_average()}"}} \n')
                 moving_av.increase_last_output_date()
                 moving_av.check_dates_against_window()
 
             moving_av.add_duration_value(timestamp, int(duration_str))
             with open('output.json', 'a') as f:
                 f.write(f'{{"date": {moving_av.last_output_date} , '
-                        f'"duration": "{moving_av.get_current_average()}"}} \n')
+                        f'"average_delivery_time": "{moving_av.get_current_average()}"}} \n')
             moving_av.increase_last_output_date()
 
 
