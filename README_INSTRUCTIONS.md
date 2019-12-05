@@ -12,8 +12,8 @@ I've made several assumptions (some are based on previous questions and answers)
 5. I don't need to perform any checks on input lines or filter input data (e.g. event_name == translation_delivered and etc.)
 
 ## Run the app
-1. create virtualenv with your favorite tool, e.g. virtualenv, virtualenvwrapper, Pipenv, etc.
-2. install all dependencies from requirements.txt (or Pipfile if using Pipenv)
+1. Not obligatory as I don't use additional modules, but can be done if you have several versions of Python and running them without Docker : create virtualenv with your favorite tool, e.g. virtualenv, virtualenvwrapper, Pipenv, etc.
+2. Use Python 3.6+ (please refer to explanations in Assumptions #4.)
 3. cd to directory with project
 4. run the app
 
@@ -22,9 +22,9 @@ How to run the app:
 	python main.py --input_file events.json --window_size 10
 	
 ## Run tests
-1. create virtualenv
-2. cd to directory with tests
-3. add project directory to PYTHONPATH
+1. Not obligatory as I don't use additional modules, but can be done if you have several versions of Python and running them without Docker : create virtualenv with your favorite tool, e.g. virtualenv, virtualenvwrapper, Pipenv, etc.
+2. cd to directory with project/tests
+3. add project directory to PYTHONPATH (export PYTHONPATH=/path-to-project/tests)
 4. run tests
 
 How to run the app:
@@ -32,9 +32,10 @@ How to run the app:
 	python -m unittest
 
 ### Some explaining
-1. - Why use custom input object and not 'with open(file) as file: ...'?
-- You can redefine any input object (e.g. data from database) and you don't need to change a lot of code. You just need 
-input object to be an iterator.
-2. - 
+Q: Why use custom input object and not 'with open(file) as file: ...'?
+
+A: You can redefine any input object (e.g. data from database) and you don't need to change a lot of code. You just need 
+input object to be an iterable.
+
 
 #### Extra 
