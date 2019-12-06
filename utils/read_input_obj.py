@@ -25,5 +25,10 @@ class InputSourceFile:
         self.input_source.close()
 
     def first_line(self):
+        """
+        Fetches first line of input file
+        Returns:
+
+        """
         with open(self.file_path) as file:
             return file.readline()

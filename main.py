@@ -12,6 +12,11 @@ logger = init_sys_logger('main_calc_av')
 
 
 def main():
+    """
+    Main pipeline for processing data
+    Returns: Non
+
+    """
     parser = create_parser()
     args = parser.parse_args()
 

@@ -10,6 +10,11 @@ logger = init_sys_logger('bonus')
 
 
 def main():
+    """
+    Main pipeline for producing and saving chart as PNG
+    Returns: None
+
+    """
     user_input = input('Please provide size of X axis as integer: ')
     try:
         chart_len = int(user_input)

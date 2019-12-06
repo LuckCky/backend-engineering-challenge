@@ -3,7 +3,7 @@ import logging.handlers
 import os
 
 
-def init_sys_logger(name):
+def init_sys_logger(name: str):
     """
     Defines logger
     Args:
