@@ -47,15 +47,17 @@ def main():
             moving_av.set_records_count()
             while timestamp != moving_av.last_output_date:
                 with open('output.json', 'a') as f:
-                    f.write(f'{{"date": {moving_av.last_output_date} , '
-                            f'"average_delivery_time": "{moving_av.get_current_average()}"}} \n')
+                    output_str = json.dumps({"date": str(moving_av.last_output_date),
+                                             "average_delivery_time": moving_av.get_current_average()})
+                    f.write(output_str + '\n')
                 moving_av.increase_last_output_date()
                 moving_av.check_dates_against_window()
 
             moving_av.add_duration_value(timestamp, int(duration_str))
             with open('output.json', 'a') as f:
-                f.write(f'{{"date": {moving_av.last_output_date} , '
-                        f'"average_delivery_time": "{moving_av.get_current_average()}"}} \n')
+                output_str = json.dumps({"date": str(moving_av.last_output_date),
+                                         "average_delivery_time": moving_av.get_current_average()})
+                f.write(output_str + '\n')
             moving_av.increase_last_output_date()
 
 
