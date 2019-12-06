@@ -12,6 +12,7 @@ class TestMovingAverage(unittest.TestCase):
         cls.moving_av = MovingAverage(cls.timestamp, cls.window_size)
 
     def test_set_records_count_none(self):
+        self.moving_av.data_dict = {}
         self.moving_av.set_records_count()
         self.assertEqual(self.moving_av.records_count, 0)
 

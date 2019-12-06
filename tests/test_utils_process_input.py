@@ -59,7 +59,7 @@ class TestUtils(unittest.TestCase):
 
     def test_get_timestamp_from_good_timestamp(self):
         self.assertEqual(get_timestamp_from_string('2018-12-26 18:11:08.509654'),
-                         (True, datetime(2018, 12, 26, 18, 11, 8, 509654)))
+                         (True, datetime(2018, 12, 26, 18, 12)))
 
     def test_get_timestamp_from_bad_timestamp(self):
         self.assertEqual(get_timestamp_from_string('2018-12-26 18:11:08'), (False, None))
